@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class DraggableObject : MonoBehaviour
 {
+    public event EventHandler<Vector3> OnDrag = (sender, vector3) => { }; 
+    
     private bool isDragging;
     
     void Start()
@@ -15,24 +17,21 @@ public class DraggableObject : MonoBehaviour
 
     void Update()
     {
-        Vector2 mousePos = Mouse.current.position.ReadValue();
-        Debug.Log(Camera.main.ScreenToWorldPoint(mousePos));
         if (isDragging)
         {
             Vector2 mouseTranslation = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
             transform.Translate(mouseTranslation);
+            OnDrag.Invoke(this, transform.position);
         }
     }
 
-    private void OnMouseDown()
+    public void StartDragging()
     {
         isDragging = true;
-        Debug.Log("ONMOUSEDOWN");
     }
 
-    private void OnMouseUp()
+    public void StopDragging()
     {
         isDragging = false;
-        Debug.Log("ONMOUSEUP");
     }
 }

@@ -1,6 +1,67 @@
 {
     "name": "MoonLoopControls",
-    "maps": [],
+    "maps": [
+        {
+            "name": "Player",
+            "id": "cdb98d89-7020-4767-a8e9-2dffb532f19b",
+            "actions": [
+                {
+                    "name": "Drag",
+                    "type": "Value",
+                    "id": "84346477-9624-458b-b76c-bd716ac5fc07",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Mouse Drag",
+                    "id": "697cbc6a-c131-419b-a6bf-e5e4c28fc6b8",
+                    "path": "MouseDrag",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Drag",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "52629ae7-eaef-404f-b3c8-fe477b4f1838",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "delta",
+                    "id": "73d4fe24-3179-4ba9-a172-fce048cf1437",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "position",
+                    "id": "e63739eb-a463-4f5d-b8c3-8dcbb3d75151",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "Drag",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
     "controlSchemes": [
         {
             "name": "KBM",
